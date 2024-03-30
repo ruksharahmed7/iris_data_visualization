@@ -22,6 +22,12 @@ of the three species of iris from the dataset:
 - Measures of Dispersion (standards deviation, range) (5 marks)
 '''
 def feature_stats_info(feature: str = 'Sepal width', csv_file_path: str = 'Iris.csv'):
+    """
+    A function to calculate various statistics (mean, median, standard deviation, range) for a given feature in a dataset, grouped by species. 
+    Parameters:
+    - feature: str, the feature for which statistics are calculated (default is 'Sepal width')
+    - csv_file_path: str, the file path for the dataset in CSV format (default is 'Iris.csv')
+    """
     df = pd.read_csv(csv_file_path) # read the dataset from a csv file in pandas dataframe
     feature_df = df[[feature, 'Species']] # Select the feature and the target column
 
